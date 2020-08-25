@@ -1011,11 +1011,16 @@ def selectedque_q3(selectedque):
     lst = []
     for i in result:
         lst.append(i)
-    return jsonify(lst)                
+    return jsonify(lst)     
+
+@app.route("/",methods=['GET'])
+@cross_origin(origin='*',headers=['Content-Type','Access-Control-Allow-Origin'])
+def home():
+    return "Hi! App is running fine." 
 
 
 
-app.run(debug=True, port=33507)
+app.run(port=5000,debug=True)
  
 
 
