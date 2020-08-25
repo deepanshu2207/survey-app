@@ -1015,7 +1015,7 @@ def selectedque_q3(selectedque):
 
 
 
-app.run()
+app.run(debug=True, port=33507)
  
 
 
